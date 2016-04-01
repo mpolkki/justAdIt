@@ -1,0 +1,40 @@
+
+<div class="container">
+	<div class="alert alert-info" role="alert" ng-show="viesti"> {{viesti}} </div>
+	<div class="alert alert-danger" role="alert" ng-show="virheviesti"> {{virheviesti}} <a href="" ng-click="fetch()">Hae ilmoitukset uudestaan</a>
+	</div>
+		
+	<div class="panel panel-info">
+  		<div class="panel-heading">
+    		<h3 class="panel-title"> Haku </h3>
+  		</div>
+  		<div class="panel-body">
+  			<div>
+  				Sanahaku <input type="text" ng-model="hakusana"	/>
+  			</div>
+    		<div style="float: right;">
+  			</div>
+		</div>
+	</div>
+	
+	<div class="ad" ng-repeat="x in ads | filter:hakusana">
+	 	<div class="panel panel-default">
+	  		<div class="panel-heading">
+	    		<h3 class="panel-title"> {{ x.title }} {{ x.priceCents/100 }}€</h3>
+	  		</div>
+	  		<div class="panel-body">
+	  			<div>
+	  				<div style="float:left;">
+	    		 	Kuvaus: {{ x.description }}
+	    			Hinta: {{ x.priceCents/100 }}
+	    			Sähköposti: {{ x.email }}
+	    			Puhelin: {{ x.phone }}
+	  				</div>
+	  			</div>
+	    		<div style="float: right;">
+	  				<img src="{{x.imageUrl}}" class="adimage" alt="<ei kuvaa>" width="200" height="auto"/>
+	  			</div>
+			</div>
+		</div>
+	</div>
+</div>
