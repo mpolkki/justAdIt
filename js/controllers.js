@@ -37,7 +37,7 @@ app.controller("newAdController", function($scope, $http, $resource) {
     Ad.save($scope.ad,function(data) {
       $scope.viesti= "Ilmoitus lisätty";
       $scope.virheviesti=null;
-      $scope.ad = angular.copy(ad);
+      $scope.ad = null;
       }, 
       function(error) {
         $scope.viesti= null;
