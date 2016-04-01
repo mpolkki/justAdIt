@@ -7,7 +7,7 @@ app.controller("adController", function($scope, $http, $resource) {
     $scope.viesti= "Haetaan ilmoituksia...";
     $scope.virheviesti= null;
 
-    var MarketAds = $resource('http://mepa-store-api.herokuapp.com/marketadsit'); 
+    var MarketAds = $resource('http://mepa-store-api.herokuapp.com/marketads'); 
 
     MarketAds.query(function(data) {
        
@@ -30,7 +30,7 @@ app.controller("newAdController", function($scope, $http, $resource) {
   
   $scope.submit = function() {
     $scope.viesti= "Lisätään ilmoitusta...";
-    var Ad = $resource('http://mepa-store-api.herokuapp.com/marketadsit');
+    var Ad = $resource('http://mepa-store-api.herokuapp.com/marketads');
     
     $scope.ad.priceCents= $scope.ad.price * 100;
     
