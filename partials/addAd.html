@@ -4,7 +4,7 @@
 <div class="alert alert-danger" role="alert" ng-show="virheviesti" style="width: 70%;"> {{virheviesti}} </div>
 
 <form name="lisaaForm" novalidate="">
-  <div class="input-group" style="width: 70%;">
+  <div class="input-group" style="width: 100%;">
     <span class="input-group-addon" id="basic-addon1" style="width: 120px;">Otsikko</span>
     <span ng-show="lisaaForm.otsikko.$touched && lisaaForm.otsikko.$invalid">Otsikko on pakollinen.</span> 
     <input type="text" name="otsikko" class="form-control" placeholder="Ilmoituksen otsikko" aria-describedby="basic-addon1" ng-model="ad.title" required style="width: 100%"/>
@@ -12,7 +12,7 @@
   </div>
   <br/>
 
-  <div class="input-group" style="width: 70%;">
+  <div class="input-group" style="width: 100%;">
     <span class="input-group-addon" id="basic-addon1" style="width: 120px; vertical-align: top;">Kuvaus</span>
     <span ng-show="lisaaForm.kuvaus.$touched && lisaaForm.kuvaus.$invalid">Kuvaus on pakollinen.</span> 
     <div class="input-group" style="width: 100%">
@@ -21,7 +21,7 @@
   </div>
   <br/>
 
-  <div class="input-group" style="width: 70%;">
+  <div class="input-group" style="width: 100%;">
     <span class="input-group-addon" style="width: 120px;">Hinta</span>
     <span ng-show="lisaaForm.hinta.$error.pattern">Tarkista hinta.</span>
     <span ng-show="lisaaForm.hinta.$touched && lisaaForm.hinta.$invalid">Tarkista hinta.</span> 
@@ -30,7 +30,7 @@
   </div>
   <br/>
 
-  <div class="input-group" style="width: 70%;">
+  <div class="input-group" style="width: 100%;">
     <span class="input-group-addon" id="basic-addon1" style="width: 120px;">Sähköposti</span>
     <span ng-show="lisaaForm.email.$touched && lisaaForm.email.$invalid">Tarkista sähköposti.</span> 
     <input name="email" type="email" class="form-control" aria-describedby="basic-addon1" 
@@ -38,7 +38,7 @@
   </div>
   <br/>
  
-  <div class="input-group" style="width: 70%;">
+  <div class="input-group" style="width: 100%;">
     <span class="input-group-addon" id="basic-addon1" style="width: 120px;">Puhelin</span>
     <span ng-show="lisaaForm.puhelin.$error.pattern">Tarkista puhelinnumero.</span>
     <span ng-show="lisaaForm.puhelin.$touched && lisaaForm.puhelin.$invalid">Puhelinnumero on pakollinen.</span> 
